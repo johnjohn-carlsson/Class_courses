@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FakeTube</title>
+</head>
+<style> /* Detta ska in i CSS fil egentligen */
+    ul.navbar li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    }
+    .vidsearch {
+        width: 200px;
+    }
+</style>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <nav>
+            <ul class="navbar">
+                <li>
+                    <img src="Images/faketube_img.png" width="60" height="auto" alt="faketube-logo">
+                    
+                </li>
+                <li>
+                    <form>
+                        <label for="vidsearch">Search FakeTube:</label>
+                        <input type="text" placeholder="Search videos here" class="vidsearch" name="vidsearch">
+                        <input type="submit">
+                    </form>
+                </li>
+                <li>
+                    <img src="Images/anon_pfp.png" width="50" height="auto" alt="profile-picture">
+                </li>
+            </ul>
+        </nav>
+        <article class="vidbox">
+            <figure>
+                <video width="600" height="400" controls autoplay muted loop>
+                    <source src="Videos/00005.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+                <figcaption id="viddesc">
+                    <h3>Title of video</h3>
+                    <p>Video description</p>
+                </figcaption>
+            </figure>
+        </article>
+    </main>
+</body>
+</html>
