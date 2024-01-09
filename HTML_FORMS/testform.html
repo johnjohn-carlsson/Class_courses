@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulär</title>
+</head>
+<body>
+    <form action="https://formshow.systementor.se/" method="post"> <!-- Skickar iväg input till denna -->
+        <div class="form-group">
+            <label>Range: </label>
+            <input type="range" name="range" class="custom-range" /> <!-- Kan t.ex ändra type till "text" -->
+        </div>
+        <div class="form-group">
+            <label for="cars">Choose a car:</label>​
+            <select name="cars" id="cars">​
+            <option value="volvo">Volvo</option>​
+            <option value="saab">Saab</option>​
+            <option value="mercedes">Mercedes</option>​
+            <option value="audi">Audi</option>​
+            </select>
+        </div>
+        <input type="submit" value="Skicka in" />
+    </form>
+</body>
+</html>

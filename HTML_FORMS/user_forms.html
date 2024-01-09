@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="https://formshow.systementor.se/" method="post"> <!-- Skickar iväg input till denna -->
+        <div class="form-group">
+                <h2>NEW USER REGISTER HERE</h2>
+                <p>Please fill out the following information</p>
+
+                <input type="email" name="email" id="email" placeholder="Enter Email">
+
+                <div id="special-div">
+                    <input type="text" name="firstName" id="firstName" placeholder="First Name">
+                    <input type="text" name="lastName" id="lastName" placeholder="Last Name">
+                </div>
+
+                <div id="special-div">
+                    <input type="password" name="password" id="password" placeholder="Enter Password">
+                    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password">
+                </div>
+
+                
+                
+                <select name="country" id="country">
+                    <option value="" disabled selected hidden>Select Country</option>
+                    <option value="sweden">Sweden</option>
+                    <option value="norway">Norway</option>
+                    <option value="denmark">Denmark</option>
+                </select>
+                
+
+                
+                <select name="usertype" id="usertype">
+                    <option value="" disabled selected hidden>Select a type</option>
+                    <option value="normal">Normal</option>
+                    <option value="premium">Premium</option>
+                    <option value="BIP">BIP</option>
+                </select>
+                
+
+                <div>
+                    <input type="checkbox" name="checkboxUpdates" id="checkboxUpdates">
+                    <label for="checkboxUpdates">Send me important updates.</label>
+                </div>
+
+                <button>Register Me</button>
+        </div>
+    </form>
+</body>
+</html>

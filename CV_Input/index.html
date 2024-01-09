@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .input-group {
+      display: flex;
+      margin-bottom: 10px;
+      width: 200px;
+    }
+    .input-group label {
+      font-weight: bold;
+    }
+    .input-group input {
+      width: 200px;
+      padding: 5px;
+    }
+    aside {
+      float: right;
+    }
+    article {
+        width: 400px;
+    }
+  </style>
+<body>
+    <form action="https://formshow.systementor.se/" method="post"> <!-- Skickar iväg input till denna -->
+        <div class="form-group">
+            <article>
+                <h2>CV Uppgifter</h2>
+
+                <div class="input-group">
+                    <div>
+                      <label for="namn">Namn</label>
+                      <input
+                        type="text"
+                        name="namn"
+                        id="namn"
+                        placeholder="Fullständigt Namn"
+                      />
+                    </div>
+                
+                    <div>
+                        <label for="mobil">Mobiltelefon</label>
+                        <input
+                          type="tel"
+                          name="mobil"
+                          id="mobil"
+                          placeholder="Mobiltelefon"
+                        />
+                      </div>
+                </div>
+
+                <div class="input-group">
+                    <div>
+                      <label for="address">Adress</label>
+                      <input
+                        type="text"
+                        name="address"
+                        id="address"
+                        placeholder="Address"
+                      />
+                    </div>
+                
+                    <div>
+                        <label for="postnummer">Postnummer</label>
+                        <input
+                          type="text"
+                          name="postnummer"
+                          id="postnummer"
+                          placeholder="Postnummer"
+                        />
+                      </div>
+                </div>
+                
+
+                <div class="input-group">
+                    <div>
+                      <label for="postort">Postort</label>
+                      <input
+                        type="text"
+                        name="postort"
+                        id="postort"
+                        placeholder="Postort"
+                      />
+                    </div>
+                
+                    <div>
+                        <label for="email">Email</label>
+                        <input
+                          type="email"
+                          name="email"
+                          id="email"
+                          placeholder="Email"
+                        />
+                      </div>
+                </div>
+                
+                
+                <div>
+                    <label for="utbildning">Beskrivning av utbildningen*</label>
+                </div>
+                <select name="utbildning" id="utbildning" size="3">
+                    <option value="högskoleutbildning">Högskoleutbildning</option>
+                    <option value="yrkeshögskola">Yrkeshögskola</option>
+                    <option value="gymnasial utbildning">Gymnasial utbildning</option>
+                </select>
+
+                <aside>
+                    <div>
+                        <input 
+                            type="radio" 
+                            name="arbeta" 
+                            id="arbetaSverige"
+                        />
+                        <label for="arbetaSverige">Kan arbeta inom Sverige</label>
+                    </div>
+
+                    <div>
+                        <input 
+                            type="radio" 
+                            name="arbeta" 
+                            id="arbetaEU"
+                        />
+                        <label for="arbetaEU">Kan arbeta inom EU</label>
+                    </div>
+
+                    <div>
+                        <input 
+                            type="radio" 
+                            name="arbeta" 
+                            id="arbetaRegionalt"
+                        />
+                        <label for="arbetaRegionalt">Endast arbete regionalt</label>
+                    </div>
+                </aside>
+
+                <div>
+                    <input type="checkbox" name="har-körkort" id="checkboxkorkort">
+                    <label for="checkboxkorkort">Jag har körkort</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="har-bil" id="checkboxbil">
+                    <label for="checkboxbil">Jag har bil</label>
+                </div>
+
+                <button type="submit">Spara</button>
+                <button type="reset">Avbryt</button>
+            </article>
+        </div>
+    </form>
+</body>
+</html>
