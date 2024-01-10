@@ -1,0 +1,14 @@
+I models.py byggs databasen upp.
+I app.py körs programmet som startar sidan.
+
+Steg 1: Bygg upp app.py och models.py (models.py behöver inte ha några modeller alls bara SQLAlchemy)
+
+Steg 2: Kör igång Flask enligt nedan
+Kör först 'flask db init'
+Kör sedan 'flask db migrate -m "Initial migration.'
+Kör sedan 'flask db upgrade'
+
+Steg 3: Kör app.py för att få igång sidan.
+
+Steg 4: Lägg till modeller i models.py OBS - Kom ihåg att köra flask db migrate, sedan flask db upgrade.
+Typ som i GitHub när man gör Stage, Commit fast inte riktigt.
