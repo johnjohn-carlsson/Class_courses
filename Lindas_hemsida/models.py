@@ -1,5 +1,7 @@
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+from faker import Faker
+import random
 
 db = SQLAlchemy()
 
@@ -34,4 +36,49 @@ class BestallningsDetalj(db.Model):
     antal = db.Column(db.Integer, nullable=False)
     pris_per_enhet = db.Column(db.Float, nullable=False)
 
+class Tidningar(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    titel = db.Column(db.String(80), nullable=False)
+    forfattare = db.Column(db.String(50), nullable=False)
+    pris = db.Column(db.Float, nullable=False)
+    lagerantal = db.Column(db.Integer, nullable=False)
+
 # Lägg till andra tabeller som Anställda här om det behövs
+
+
+def seed_data():
+    fake = Faker()
+
+    nr_of_books = Bok.query.count()
+    if nr_of_books < 500:
+        for _ in range(100):
+            title = fake.catch_phrase()
+            author = fake.name()
+            isbn = fake.isbn13()
+            price = random.randint(50, 400)
+            inventory = random.randint(0, 10000)
+
+            bok = Bok(titel=title,
+                    forfattare=author,
+                    isbn=isbn,
+                    pris=price,
+                    lagerantal=inventory)
+            db.session.add(bok)
+            db.session.commit()
+
+
+    nr_of_customers = Kund.query.count()
+    if nr_of_customers < 1000:
+        fake2 = Faker('sv_SE')  # Svensk lokaliseringsinställning
+        while nr_of_customers < 1000:
+            kund = {
+                "namn": fake2.name(),
+                "adress": fake2.address(),
+                "epost": fake2.email(),
+                "telefonnummer": fake2.phone_number()
+            }
+            if Kund.query.filter_by(epost=kund['epost']).first() is None:    
+                db.session.add(Kund(**kund))
+                db.session.commit()
+                nr_of_customers += 1
+
