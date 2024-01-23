@@ -3,70 +3,70 @@ import random
 majorCards = {
     "The Fool": 
         ["Obegränsad Potential", "Nya Begynnelser, Nya Idéer, Oskuld, Äventyr",
-         "Oansvarighet, Orädsla, Risk", "Ja"],
+         "Oansvarighet, Orädsla, Risk", "Ja", "tarot-fool.jpg"],
     "The Magician": 
         ["Beslutsamhet och Vilja", "Viljestyrka, Skapande, Inre Styrka, Manifestation",
-         "Manipulering, Illusioner", "Ja"],
+         "Manipulering, Illusioner", "Ja", "tarot-magician.jpg"],
     "The High Priestess": 
         ["Att Lära och Lyssna", "Inre Röst, Omedvetande, Den Gudomliga Kvinnligheten, Trygghet",
-         "Repressed Feelings, Withdrawal, Silence", "Yes"],
+         "Förtryckta Känslor, Återhållssamhet, Tystnad", "Yes", "tarot-highpriestess.jpg"],
     "The Empress": 
         ["Den Kvinnliga Sidan", "Kvinnlighet, Omsorg, Fertilitet, Överskott, Firande",
-         "Beroende, Kvävande, Tomhet", "Ja"],
+         "Beroende, Kvävande, Tomhet", "Ja", "tarot-empress.jpg"],
     "The Emperor":
         ["Fadersgestalten", "Auktoritet, Struktur, Fadersfigur, Förändring",
-         "Överdriven kontroll, Rigiditet, Dominering", "Ja"],
+         "Överdriven kontroll, Rigiditet, Dominering", "Ja", "tarot-emperor.jpg"],
     "The Hierophant":
         ["Att Följa Strömmen", "Spritualitet, Tradition, Konformitet, Moral, Etik",
-         "Uppror, Underminering, Frihet, Individuella Övertygelser", "Neutral"],
+         "Uppror, Underminering, Frihet, Individuella Övertygelser", "Neutral", "tarot-hierophant.jpg"],
     "The Lovers":
         ["Livsförändrande Val", "Kärlek, Harmoni, Partnerskap, Val",
-         "Obalans, Ensidighet, Harmonibrist", "Ja"],
+         "Obalans, Ensidighet, Harmonibrist", "Ja", "tarot-lovers.jpg"],
     "The Chariot": 
         ["Motiverande Uppmuntran", "Vägledning, Kontroll, Viljestyrka, Beslutsamhet, Framgång, Säkerhet",
-         "Kontrollbrist, Motsättning, Avsaknad Vägledning, Självdisciplin", "Ja"],
+         "Kontrollbrist, Motsättning, Avsaknad Vägledning, Självdisciplin", "Ja", "tarot-chariot.jpg"],
     "Strength":
         ["Styrka och Mod", "Styrka, Mod, Fokus, Medkänsla, Övertygelse, Inflytande",
-         "Självtvivel, Svaghet, Osäkerhet, Orkeslöshet, Råkänsla", "Ja"],
+         "Självtvivel, Svaghet, Osäkerhet, Orkeslöshet, Råkänsla", "Ja", "tarot-strength.jpg"],
     "The Hermit":
         ["Utveckling genom Självrannsakan", "Visdom, Sökande i Själen, Lugn, Upplysning, Intuition, Vägledning",
-         "Ensamhet, Isolering, Paranoia, Sorg, Överväldigande Rädsla", "Ja"],
+         "Ensamhet, Isolering, Paranoia, Sorg, Överväldigande Rädsla", "Ja", "tarot-hermit.jpg"],
     "Wheel of Fortune":
         ["Tur", "Chans, Öde, Karma, Vändpunkt, Avslutade konflikter", 
-         "Omvälvning, Otur, Ovälkomna Förändringar, Bakslag", "Ja"],
+         "Omvälvning, Otur, Ovälkomna Förändringar, Bakslag", "Ja", "tarot-wheeloffortune.jpg"],
     "Justice":
         ["Balans och Ordning", "Rättvisa, Integritet, Rättsliga Tvister, Orsak och Verkan, Livsläxa",
-         "Orättvisa, Ohederlighet, Oansvarighet, Bedrägeri, Negativ Karma", "Neutral"],
+         "Orättvisa, Ohederlighet, Oansvarighet, Bedrägeri, Negativ Karma", "Neutral", "tarot-justice.jpg"],
     "The Hanged Man":
         ["Släpp Taget", "Att Släppa Taget, Offra, Reflektera, Osäkerhet, Uppvaknande",
-         "Missnöje, Avstannande, Negativitet, Utan Lösning, Rädsla för uppoffring", "Kanske"],
+         "Missnöje, Avstannande, Negativitet, Utan Lösning, Rädsla för uppoffring", "Kanske", "tarot-hangedman.jpg"],
     "Death":
         ["Början och Slut", "Slutet på en cykel, Övergångar, Ta Bort Överskott, Mäktig Rörelse, Beslut",
-         "Ovilja att förändra, Rädsla för det nya, Medberoende, Negativa Mönster", "Ja"],
+         "Ovilja att förändra, Rädsla för det nya, Medberoende, Negativa Mönster", "Ja", "tarot-death.jpg"],
     "Temperance":
         ["Måttfullhet och Tålamod", "Balans, Lagom, God Hälsa, Samarbete, Flitighet",
-         "Obalans, Disharmoni, Förhastning, Överkonsumtion, Riskfullt beteende", "Ja"],
+         "Obalans, Disharmoni, Förhastning, Överkonsumtion, Riskfullt beteende", "Ja", "tarot-temperance.jpg"],
     "The Devil":
         ["Illusioner", "Materiell Fokus, Materiella Ägodelar, Fången i Slaveri, Beroenden, Depression, Negativitet, Förräderi",
-         "Bryta Beroenden, Självständighet, Återerövra Makt, Frihet", "Nej"],
+         "Bryta Beroenden, Självständighet, Återerövra Makt, Frihet", "Nej", "tarot-devil.jpg"],
     "The Tower":
         ["Förstörelse", "Hastig förändring, Frigivning, Plågsam Förlust, Tragedi, Uppenbarelse",
-         "Motstå Förändring, Undvika Tragedi, Nära Ögat-Ögonblick, Fördröja det Oundvikliga", "Nej"],
+         "Motstå Förändring, Undvika Tragedi, Nära Ögat-Ögonblick, Fördröja det Oundvikliga", "Nej", "tarot-tower.jpg"],
     "The Star":
         ["Efter Regn kommer Solsken", "Hopp, Förnyelse, Kreativitet, Inspiration, Generositet, Läkande, Förändring",
-         "Förtvivlan, Hopplöshet, Uttråkan, Negativitet, Oförmåga till kreativitet", "Ja"],
+         "Förtvivlan, Hopplöshet, Uttråkan, Negativitet, Oförmåga till kreativitet", "Ja", "tarot-star.jpg"],
     "The Moon":
         ["Starka Känslor och Fantasier", "Rädsla, Ångest, Förvirring, Vanföreställning, Risk, Sorg",
-         "Övervinna rädsla, Känslomässig stabilitet, Finna sanningen, Övervinna ångest", "Nej"],
+         "Övervinna rädsla, Känslomässig stabilitet, Finna sanningen, Övervinna ångest", "Nej", "tarot-moon.jpg"],
     "The Sun":
         ["Livet från den Ljusa Sidan", "Lycka, Fertilitet, Glädje, Optimism, Sanning, Flitighet",
-         "Sorg, Pessimism, Lögner, Misslyckande, Framskjutning", "Ja"],
+         "Sorg, Pessimism, Lögner, Misslyckande, Framskjutning", "Ja", "tarot-sun.jpg"],
     "Judgement":
         ["Självreflektion", "Reflektion, Magkänsla, Bedömning, Uppvaknande, Pånyttfödelse, Förlåtelse",
-         "Nedstämdhet, Självtvivel", "Neutral/Ja"],
+         "Nedstämdhet, Självtvivel", "Neutral/Ja", "tarot-judgement.jpg"],
     "The World":
         ["Framgång och Prestation", "Harmoni, Slutförande, Resa, Enande, Integrering",
-         "Ofullständighet, Genvägar, Förseningar, Tomhet", "Ja"]
+         "Ofullständighet, Genvägar, Förseningar, Tomhet", "Ja", "tarot-world.jpg"]
     }
 
 wandCards = {
@@ -197,32 +197,60 @@ allCards = [majorCards, wandCards, pentacleCards, swordCards, aceCards]
 
 def drawMajor(n):
     drawnCards = []
-    for _ in range(n):
+    counter = 1
+
+    while counter <= n:
+        card_already_drawn = False
+
         card_name, card_attributes = random.choice(list(majorCards.items()))
         card_description = card_attributes[0]
         standing_attributes = card_attributes[1]
         laying_attributes = card_attributes[2]
+        card_image = card_attributes[4]
         
-        drawnCards.append([card_name, card_description, standing_attributes, laying_attributes])
+        for card in drawnCards:
+            if card_name == card[0]:
+                card_already_drawn = True
+        
+        if not card_already_drawn:
+            drawnCards.append([card_name, card_description, standing_attributes, laying_attributes, card_image])
+            counter += 1
     
     return drawnCards
 
 def drawAll(n):
     drawnCards = []
-    for _ in range(n):
+    counter = 1
+
+    while counter <= n:
+        card_already_drawn = False
         deck = random.choice(allCards)
+
         if deck == majorCards:
             card_name, card_attributes = random.choice(list(deck.items()))
             card_description = card_attributes[0]
             standing_attributes = card_attributes[1]
             laying_attributes = card_attributes[2]
             
-            drawnCards.append([card_name, card_description, standing_attributes, laying_attributes])
+            for card in drawnCards:
+                if card_name == card[0]:
+                    card_already_drawn = True
+            
+            if not card_already_drawn:
+                drawnCards.append([card_name, card_description, standing_attributes, laying_attributes])
+                counter += 1
         else:
             card_name, card_attributes = random.choice(list(deck.items()))
             standing_attributes = card_attributes[0]
             laying_attributes = card_attributes[1]
-            drawnCards.append([card_name, standing_attributes, laying_attributes])
+
+            for card in drawnCards:
+                if card_name == card[0]:
+                    card_already_drawn = True
+            
+            if not card_already_drawn:
+                drawnCards.append([card_name, standing_attributes, laying_attributes])
+                counter += 1
 
     return drawnCards
 
@@ -255,5 +283,3 @@ def SimpleTarotSpread(type):
             print(active_card[2])
             print("-----------------")
 
-
-SimpleTarotSpread("full")

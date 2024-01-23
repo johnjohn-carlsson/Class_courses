@@ -1,0 +1,49 @@
+body {
+    font-family: 'Cinzel Decorative', serif;
+  }
+
+.card_img {
+    height: 500px; /* Adjust the value as needed to scale down the images */
+    width: auto;
+}
+
+.centered_article {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.button_area {
+    text-align: center;
+    padding: 10px;
+}
+
+.headline-desc {
+    max-width: 250px;
+}
+
+.centered_table {
+    margin: 0 auto; /* Horizontally center the table */
+    text-align: center; /* Center text within table cells */
+}
+
+.card_img {
+    display: block;
+    margin: 0 auto; /* Horizontally center the images within table cells */
+    padding-left: 50px;
+    padding-right: 50px;
+
+}
+
+.cards_button {
+    padding: 10px;
+}
+
+.th_bordered {
+    border: 1px solid black;
+  }
+
+.card_desc_bordered {
+max-width: 300px; /* Adjust the maximum width as needed */
+margin: 0 auto; /* Center the text horizontally within the limited width */
+border: 1px solid black;
+}
