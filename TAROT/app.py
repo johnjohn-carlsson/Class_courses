@@ -30,7 +30,8 @@ def process():
     card3_img = f"static/IMG/{card3_img}"
 
     return render_template(
-        'index.html', 
+        'index.html',
+        button_pressed = True,
         card1_title = card1_title + " - " + card1_description,
         card1_standing = card1_standing,
         card1_laying = card1_laying,

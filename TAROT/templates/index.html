@@ -46,21 +46,23 @@
                 <img class="card_img" id="card-image-3" src="{{ card3_img }}" alt="Card Image 3">
               </th>
             </tr>
-            <tr>
-              <th class="th_bordered">{{ card1_title }}</th>
-              <th class="th_bordered">{{ card2_title }}</th>
-              <th class="th_bordered">{{ card3_title }}</th>
-            </tr>
-            <tr>
-              <td class="card_desc_bordered">{{ card1_standing }}</td>
-              <td class="card_desc_bordered">{{ card2_standing }}</td>
-              <td class="card_desc_bordered">{{ card3_standing }}</td>
-            </tr>
-            <tr>
-              <td class="card_desc_bordered">{{ card1_laying }}</td>
-              <td class="card_desc_bordered">{{ card2_laying }}</td>
-              <td class="card_desc_bordered">{{ card3_laying }}</td>
-            </tr>
+            {% if button_pressed %}
+              <tr>
+                <th class="th_bordered">{{ card1_title }}</th>
+                <th class="th_bordered">{{ card2_title }}</th>
+                <th class="th_bordered">{{ card3_title }}</th>
+              </tr>
+              <tr>
+                <td class="card_desc_bordered">{{ card1_standing }}</td>
+                <td class="card_desc_bordered">{{ card2_standing }}</td>
+                <td class="card_desc_bordered">{{ card3_standing }}</td>
+              </tr>
+              <tr>
+                <td class="card_desc_bordered">{{ card1_laying }}</td>
+                <td class="card_desc_bordered">{{ card2_laying }}</td>
+                <td class="card_desc_bordered">{{ card3_laying }}</td>
+              </tr>
+            {% endif %}
           </table>
           <div class="button_area">
             <button class="cards_button" type="submit">Draw New Cards</button>
